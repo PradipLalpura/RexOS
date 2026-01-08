@@ -1,74 +1,113 @@
-# React + TypeScript + Vite
+🚀 RexOS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rule your mind. Run your life. Execute daily.
 
-Currently, two official plugins are available:
+RexOS is the next evolution of our previous app, Achievers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Achievers helped users start their self-improvement journey.
+RexOS is built to finish it.
 
-## React Compiler
+Where Achievers focused on motivation and tracking, RexOS focuses on discipline, systems, and identity-level execution.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Achievers was about doing more.
+RexOS is about becoming more.
 
-## Expanding the ESLint configuration
+🔁 From Achievers → RexOS (What Changed)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Achievers (Old App)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Motivation-driven
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Task & goal tracking
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Short-term consistency
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+External push to act
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+RexOS (New App)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-"# RexOS" 
+Discipline-first system
+
+Identity & execution focused
+
+Long-term self-mastery
+
+Internal command to act
+
+RexOS was rebuilt from the ground up using everything we learned while building Achievers—fixing its limits and doubling down on what actually creates change.
+
+🧠 Core Philosophy
+
+Discipline over motivation
+
+Systems over willpower
+
+Identity before outcomes
+
+Daily execution compounds
+
+RexOS is designed as a Life Operating System, not just another productivity app.
+
+⚙️ Tech Stack
+
+Frontend: React + Vite
+
+Mobile: Capacitor
+
+Platform: Web + Android
+
+Design: Minimal, system-oriented UI
+
+🖥️ Run Locally (Development)
+
+Install dependencies and start the development server:
+
+npm install
+npm run dev
+
+
+The app will run locally in development mode.
+
+📱 Build Android APK
+1️⃣ Sync Web Build to Android
+npx cap sync android
+
+
+This syncs the latest web build into the Android project.
+
+2️⃣ Open Android Studio
+npx cap open android
+
+
+Android Studio will open the project.
+
+3️⃣ Build APK
+
+Wait for Gradle sync to complete
+
+Go to Build → Build Bundle(s) / APK(s) → Build APK(s)
+
+Android Studio will generate the APK
+
+Locate the APK from the build output
+
+🎯 Vision
+
+RexOS is built to become a complete personal operating system that helps users:
+
+Execute daily with clarity
+
+Track real progress across life domains
+
+Reflect weekly with intention
+
+Build an identity rooted in discipline
+
+🛡️ Closing Note
+
+Achievers taught us what starts progress.
+RexOS is built for what sustains it.
+
+Motivation fades. Systems remain.
+
+RexOS — Execute daily.
