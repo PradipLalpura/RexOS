@@ -1,0 +1,658 @@
+/* RexOS Weekly Report Styles */
+
+.weekly-report {
+    padding: var(--space-6);
+    max-width: var(--container-lg);
+    margin: 0 auto;
+}
+
+.report-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+}
+
+.report-header h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-black);
+}
+
+.report-subtitle {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+}
+
+/* Report Content */
+.report-content {
+    background: var(--color-bg-primary);
+}
+
+.report-section {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin-bottom: var(--space-4);
+}
+
+.report-section h2 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Verdict Section */
+.verdict-section {
+    background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-bg-tertiary));
+    border-color: var(--color-accent-primary);
+}
+
+.verdict-card {
+    text-align: center;
+}
+
+.consistency-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.consistency-score .score-value {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-black);
+    color: var(--color-accent-primary);
+}
+
+.consistency-score .score-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.verdict-message {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Habit Week Grid */
+.habit-week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--space-2);
+}
+
+.habit-day {
+    text-align: center;
+    padding: var(--space-3);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+.habit-day .day-name {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2);
+}
+
+.day-status {
+    font-size: var(--text-sm);
+    font-weight: var(--font-bold);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}
+
+.day-status.complete {
+    background: var(--color-success-bg);
+    color: var(--color-success);
+}
+
+.day-status.partial {
+    background: var(--color-warning-bg);
+    color: var(--color-warning);
+}
+
+.day-status.empty {
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+}
+
+/* Habit Overview */
+.habit-overview h4 {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+}
+
+.habit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.habit-row:last-child {
+    border-bottom: none;
+}
+
+.habit-row .habit-name {
+    font-size: var(--text-sm);
+}
+
+.habit-row .habit-score {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-accent-primary);
+}
+
+/* Volume Summary */
+.volume-summary {
+    text-align: center;
+    padding: var(--space-4);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+}
+
+.volume-value {
+    display: block;
+    font-size: var(--text-4xl);
+    font-weight: var(--font-black);
+    color: var(--color-success);
+}
+
+.volume-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+/* Workout Breakdown */
+.workout-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.workout-day {
+    padding: var(--space-3);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+.workout-day-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-2);
+}
+
+.workout-day-header .day-name {
+    font-weight: var(--font-semibold);
+}
+
+.workout-day-header .day-volume {
+    color: var(--color-accent-primary);
+    font-weight: var(--font-semibold);
+}
+
+.workout-label {
+    color: var(--color-accent-primary);
+    font-weight: var(--font-normal);
+}
+
+.exercise-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.exercise-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.exercise-name {
+    font-weight: var(--font-medium);
+}
+
+.exercise-sets {
+    color: var(--color-text-muted);
+}
+
+.rest-indicator {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* Diet Totals */
+.diet-totals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-3);
+}
+
+.diet-total {
+    text-align: center;
+    padding: var(--space-3);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+.diet-total .total-value {
+    display: block;
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+}
+
+.diet-total .total-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+/* Diet Daily */
+.diet-daily {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--space-2);
+}
+
+.diet-day {
+    text-align: center;
+    padding: var(--space-2);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+.diet-day .day-name {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-1);
+}
+
+.diet-day .day-calories {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+}
+
+.diet-day .day-protein {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+/* Daily Breakdown */
+.daily-breakdown .section-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-3);
+}
+
+.daily-card {
+    padding: var(--space-4);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-border);
+}
+
+.daily-card.rating-excellent {
+    border-left-color: var(--color-success);
+}
+
+.daily-card.rating-good {
+    border-left-color: var(--color-accent-primary);
+}
+
+.daily-card.rating-warning {
+    border-left-color: var(--color-warning);
+}
+
+.daily-card.rating-danger {
+    border-left-color: var(--color-danger);
+}
+
+.daily-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.daily-header h4 {
+    font-size: var(--text-base);
+    flex: 1;
+}
+
+.daily-date {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.daily-score {
+    font-weight: var(--font-bold);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}
+
+.score-excellent {
+    background: var(--color-success-bg);
+    color: var(--color-success);
+}
+
+.score-good {
+    background: var(--color-accent-glow);
+    color: var(--color-accent-primary);
+}
+
+.score-warning {
+    background: var(--color-warning-bg);
+    color: var(--color-warning);
+}
+
+.score-danger {
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+}
+
+.daily-ratings {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.rating-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+}
+
+.rating-label {
+    color: var(--color-text-muted);
+}
+
+.rating-value {
+    font-weight: var(--font-semibold);
+}
+
+.rating-value.excellent {
+    color: var(--color-success);
+}
+
+.rating-value.good {
+    color: var(--color-accent-primary);
+}
+
+.rating-value.warning {
+    color: var(--color-warning);
+}
+
+.rating-value.danger {
+    color: var(--color-danger);
+}
+
+/* Report Footer */
+.report-footer {
+    text-align: center;
+    padding: var(--space-8) var(--space-6);
+    margin-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+}
+
+.report-footer .logo {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-black);
+    margin-bottom: var(--space-2);
+}
+
+.report-footer p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .weekly-report {
+        padding: var(--space-4);
+    }
+
+    .report-header {
+        flex-direction: column;
+        gap: var(--space-4);
+        align-items: flex-start;
+    }
+
+    .report-header .btn {
+        width: 100%;
+    }
+
+    .habit-week-grid,
+    .diet-daily {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .diet-totals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .daily-breakdown .section-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .habit-week-grid,
+    .diet-daily {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Print/PDF Styles */
+@media print {
+    .weekly-report {
+        padding: 0;
+    }
+
+    .report-header .btn {
+        display: none;
+    }
+
+    .report-section {
+        break-inside: avoid;
+    }
+}
+
+/* Additional Exercises in Report */
+.additional-label {
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    color: var(--color-accent-primary);
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-1);
+}
+
+.exercise-summary.additional {
+    opacity: 0.8;
+}
+
+/* Daily Note Preview in Cards */
+.daily-note-preview {
+    margin-top: var(--space-3);
+    padding: var(--space-2);
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+}
+
+.daily-note-preview .note-icon {
+    font-size: var(--text-sm);
+}
+
+.daily-note-preview .note-text {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+/* Notes Section in Report */
+.notes-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.note-entry {
+    padding: var(--space-4);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    border-left: 3px solid var(--color-accent-primary);
+}
+
+.note-entry-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-2);
+}
+
+.note-entry-header .note-day {
+    font-weight: var(--font-semibold);
+    color: var(--color-accent-primary);
+}
+
+.note-entry-header .note-date {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.note-content {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.no-notes-message {
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: var(--space-4);
+}
+
+/* Report Chart Styles */
+.report-chart-container {
+    margin-top: var(--space-4);
+    padding: var(--space-4);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+}
+
+.report-chart-container h4 {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.report-chart-wrapper {
+    height: 200px;
+    position: relative;
+}
+
+.report-chart-wrapper-lg {
+    height: 280px;
+}
+
+/* AI Review Section Styles */
+.ai-review-section {
+    background: linear-gradient(135deg, var(--color-bg-secondary), rgba(99, 102, 241, 0.05));
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.ai-review-intro p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-3);
+}
+
+.ai-review-tip {
+    background: rgba(245, 158, 11, 0.1);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-warning);
+}
+
+.ai-prompt-box {
+    margin-top: var(--space-4);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.ai-prompt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+}
+
+.ai-prompt-content {
+    padding: var(--space-4);
+}
+
+.ai-prompt-content code {
+    display: block;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: var(--text-sm);
+    color: var(--color-accent-primary);
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Print/PDF Chart Styles */
+@media print {
+    .report-chart-container {
+        break-inside: avoid;
+    }
+
+    .report-chart-wrapper {
+        height: 180px;
+    }
+
+    .report-chart-wrapper-lg {
+        height: 240px;
+    }
+
+    .ai-prompt-header .btn {
+        display: none;
+    }
+}

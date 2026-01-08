@@ -1,0 +1,252 @@
+/* RexOS Habit Tracker Styles */
+
+.habit-tracker {
+    padding: var(--space-6);
+    max-width: var(--container-lg);
+    margin: 0 auto;
+}
+
+.tracker-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+}
+
+.tracker-header h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-black);
+}
+
+.tracker-subtitle {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+}
+
+/* Progress Overview */
+.habit-progress {
+    display: flex;
+    gap: var(--space-8);
+    align-items: center;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.habit-progress.rating-excellent {
+    border-color: var(--color-success);
+}
+
+.habit-progress.rating-good {
+    border-color: var(--color-accent-primary);
+}
+
+.habit-progress.rating-warning {
+    border-color: var(--color-warning);
+}
+
+.habit-progress.rating-danger {
+    border-color: var(--color-danger);
+}
+
+.progress-stats {
+    text-align: center;
+    min-width: 120px;
+}
+
+.progress-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: var(--space-1);
+}
+
+.progress-number .completed {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-black);
+}
+
+.rating-excellent .completed {
+    color: var(--color-success);
+}
+
+.rating-good .completed {
+    color: var(--color-accent-primary);
+}
+
+.rating-warning .completed {
+    color: var(--color-warning);
+}
+
+.rating-danger .completed {
+    color: var(--color-danger);
+}
+
+.progress-number .separator,
+.progress-number .total {
+    font-size: var(--text-xl);
+    color: var(--color-text-muted);
+}
+
+.progress-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+}
+
+.progress-bar-container {
+    flex: 1;
+}
+
+.progress-bar.large {
+    height: 12px;
+    margin-bottom: var(--space-3);
+}
+
+.progress-message {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Habit List */
+.habit-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.habit-item:hover {
+    border-color: var(--color-accent-primary);
+    background: var(--color-bg-tertiary);
+}
+
+.habit-item.completed {
+    border-color: var(--color-success);
+    background: rgba(34, 197, 94, 0.05);
+}
+
+.habit-checkbox {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.habit-checkbox svg {
+    width: 18px;
+    height: 18px;
+    color: white;
+}
+
+.habit-checkbox.checked {
+    background: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.habit-item:hover .habit-checkbox:not(.checked) {
+    border-color: var(--color-accent-primary);
+}
+
+.habit-info {
+    flex: 1;
+}
+
+.habit-top {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+}
+
+.habit-info .habit-icon {
+    font-size: var(--text-xl);
+}
+
+.habit-info .habit-name {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+}
+
+.habit-description {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.habit-time {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.time-label {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-1);
+}
+
+.time-value {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-success);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .habit-tracker {
+        padding: var(--space-4);
+    }
+
+    .tracker-header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .date-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .habit-progress {
+        flex-direction: column;
+        gap: var(--space-4);
+        text-align: center;
+    }
+
+    .progress-bar-container {
+        width: 100%;
+    }
+
+    .habit-item {
+        flex-wrap: wrap;
+    }
+
+    .habit-time {
+        width: 100%;
+        text-align: left;
+        margin-top: var(--space-2);
+        padding-left: calc(32px + var(--space-4));
+    }
+}

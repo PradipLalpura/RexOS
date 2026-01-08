@@ -1,0 +1,226 @@
+/* RexOS Notes / Journaling Styles */
+
+.notes-page {
+    padding: var(--space-6);
+    max-width: var(--container-lg);
+    margin: 0 auto;
+}
+
+/* Stats Card */
+.notes-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.stat-item {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    text-align: center;
+}
+
+.stat-item .stat-value {
+    display: block;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-black);
+    color: var(--color-accent-primary);
+    margin-bottom: var(--space-1);
+}
+
+.stat-item .stat-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Note Editor */
+.note-editor-container {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    margin-bottom: var(--space-6);
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.editor-header h2 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+}
+
+.save-status {
+    font-size: var(--text-sm);
+}
+
+.save-status .saving {
+    color: var(--color-warning);
+}
+
+.save-status .saved {
+    color: var(--color-success);
+}
+
+.note-textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: var(--space-5);
+    background: var(--color-bg-tertiary);
+    border: none;
+    color: var(--color-text-primary);
+    font-family: inherit;
+    font-size: var(--text-base);
+    line-height: 1.8;
+    resize: vertical;
+}
+
+.note-textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.note-textarea:focus {
+    outline: none;
+    background: var(--color-bg-elevated);
+}
+
+.editor-footer {
+    padding: var(--space-4) var(--space-5);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Writing Prompts */
+.prompts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.prompts-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-weight: var(--font-medium);
+}
+
+.prompts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.prompt-chip {
+    padding: var(--space-1) var(--space-3);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: var(--radius-full);
+    color: var(--color-accent-primary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.prompt-chip:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: var(--color-accent-primary);
+}
+
+/* Recent Notes */
+.recent-notes {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+}
+
+.recent-notes h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.note-preview {
+    padding: var(--space-4);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.note-preview:hover {
+    border-color: var(--color-accent-primary);
+    background: var(--color-bg-elevated);
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2);
+}
+
+.preview-date {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-accent-primary);
+}
+
+.preview-words {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.preview-content {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.no-notes {
+    padding: var(--space-6);
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .notes-page {
+        padding: var(--space-4);
+    }
+
+    .notes-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+
+    .note-textarea {
+        min-height: 250px;
+    }
+
+    .prompts {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
